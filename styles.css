@@ -1805,3 +1805,36 @@ footer {
       display: none;
   }
 }
+
+.tech-badge:hover {
+  background-color: var(--card-bg-light);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(61, 79, 217, 0.3);
+  transition: all 0.4s ease;
+}
+
+.tech-badge {
+    transition: all 0.4s ease;
+}
+
+.slider-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.slider-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-tertiary);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-bullet.active {
+  background-color: var(--primary-color);
+  transform: scale(1.3);
+}

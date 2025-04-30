@@ -1,5 +1,5 @@
 // Optimized and Enhanced script.js dengan efek animasi scroll berulang dan hover interaktif
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -20,20 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileNav = document.querySelector('.mobile-nav');
 
-    mobileMenuBtn.addEventListener('click', function() {
+    mobileMenuBtn.addEventListener('click', function () {
         mobileNav.classList.toggle('active');
     });
 
     const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-link');
     mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             mobileNav.classList.remove('active');
         });
     });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navbar scroll effect
     const nav = document.querySelector('nav');
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             nav.style.backgroundColor = document.documentElement.classList.contains('light-theme') ? 'rgba(249, 250, 251, 0.9)' : 'rgba(0, 0, 0, 0.9)';
             nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Horizontal slider controls
     const scrollButtons = document.querySelectorAll('.scroll-btn');
     scrollButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const direction = this.classList.contains('scroll-left') ? -1 : 1;
             const targetId = this.getAttribute('data-target');
             const slider = document.getElementById(targetId);
@@ -79,6 +79,45 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Generate bullets for each horizontal slider
+    const sliders = document.querySelectorAll('.horizontal-slider');
+
+    sliders.forEach(slider => {
+        const sliderId = slider.id;
+        const bulletsContainer = document.querySelector(`.slider-bullets[data-target="${sliderId}"]`);
+        if (!bulletsContainer) return;
+
+        const items = slider.querySelectorAll('.slider-item');
+        items.forEach((item, index) => {
+            const bullet = document.createElement('div');
+            bullet.classList.add('slider-bullet');
+            if (index === 0) bullet.classList.add('active');
+            bullet.addEventListener('click', () => {
+                slider.scrollTo({
+                    left: index * (item.offsetWidth + 16), // 16px gap
+                    behavior: 'smooth'
+                });
+            });
+            bulletsContainer.appendChild(bullet);
+        });
+
+        // Update active bullet on scroll
+        slider.addEventListener('scroll', () => {
+            const scrollLeft = slider.scrollLeft;
+            const cardWidth = items[0].offsetWidth + 16;
+            const activeIndex = Math.round(scrollLeft / cardWidth);
+            const bullets = bulletsContainer.querySelectorAll('.slider-bullet');
+            bullets.forEach((b, idx) => {
+                if (idx === activeIndex) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+        });
+    });
+
 
     // Intersection Observer for animations
     const observerOptions = {
@@ -146,13 +185,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Project card hover effect
     document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.querySelector('.project-overlay').style.opacity = '1';
             this.querySelector('.view-project').style.transform = 'translateY(0)';
             this.style.transform = 'translateY(-8px) scale(1.02)';
             this.style.boxShadow = '0 20px 50px rgba(61, 79, 217, 0.3)';
         });
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.querySelector('.project-overlay').style.opacity = '0';
             this.querySelector('.view-project').style.transform = 'translateY(20px)';
             this.style.transform = 'translateY(0) scale(1)';
@@ -161,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Hero parallax effect
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
         const heroShapes = document.querySelectorAll('.hero-shapes .shape');
         heroShapes.forEach((shape, index) => {
@@ -183,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     themeToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
+        toggle.addEventListener('click', function () {
             if (document.documentElement.classList.contains('dark-theme')) {
                 document.documentElement.classList.remove('dark-theme');
                 document.documentElement.classList.add('light-theme');
