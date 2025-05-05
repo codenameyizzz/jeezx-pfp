@@ -19,8 +19,8 @@
         <div class="container">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <div class="logo-pill">
-                        <div class="logo-circle"></div>
+                    <div class="logo">
+                        <a>YZ</a>
                     </div>
                 </div>
                 <div class="nav-links desktop-nav">
@@ -31,11 +31,10 @@
                     <a href="#testimonials" class="nav-link">Testimonials</a>
                     <a href="#achievements" class="nav-link">Achievements</a>
                     <a href="#certificates" class="nav-link">Certificates</a>
-                    <a href="#contact" class="nav-link">Contact</a>
                     <div class="theme-switch-wrapper">
                         <label class="theme-switch" for="checkbox">
-                          <input type="checkbox" id="checkbox" />
-                          <div class="slider round"></div>
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
                         </label>
                     </div>
                     <a href="#contact" class="btn btn-primary">Let's Talk</a>
@@ -56,7 +55,6 @@
         <a href="#testimonials" class="nav-link">Testimonials</a>
         <a href="#achievements" class="nav-link">Achievements</a>
         <a href="#certificates" class="nav-link">Certificates</a>
-        <a href="#contact" class="nav-link">Contact</a>
         <button class="theme-toggle" aria-label="Toggle theme">
             <i class="fas fa-sun"></i>
             <i class="fas fa-moon"></i>
@@ -79,13 +77,15 @@
                     <p class="profile-location">Toba Samosir, Indonesia</p>
 
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
+                        <a href="https://wa.me/6281234567890" class="social-link"><i class="fas fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/yizzzx" class="social-footer-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yizzz.x/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" class="social-link"><i class="far fa-envelope"></i></a>
                     </div>
 
-                    <a href="#contact" class="btn btn-primary btn-full">Let's Talk</a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-primary btn-full">Let's Talk</a>
                 </div>
 
                 <!-- Hero Text -->
@@ -114,8 +114,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="cta-buttons">
-                        <!-- <a href="#contact" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">Let's Talk</a> -->
-                        <a href="#" class="btn btn-outline download-cv" data-aos="fade-up" data-aos-delay="450">
+                        <a href="https://drive.google.com/file/d/1OIs_ajuMUF_ZrfjxXQGAnkwzLqNZ0Rbk/view?usp=sharing" class="btn btn-outline download-cv" data-aos="fade-up" data-aos-delay="450">
                             <i class="fas fa-download"></i> Download CV
                         </a>
                         <a href="#projects" class="btn btn-outline" data-aos="fade-up" data-aos-delay="500">See more</a>
@@ -131,15 +130,16 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects slider-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Recent Projects <br>and <span class="highlight">Achievements</span></h2>
             </div>
 
-            <div id="projects-slider" class="horizontal-slider">
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
+            <div class="slider-container">
+                <button class="slider-nav prev" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-track" data-aos="fade-up">
+                    <div class="slider-card project-card" onclick="openModal('A modern SaaS template with a clean design, built for startups and tech companies looking to showcase their products.')">
                         <div class="project-image">
                             <img src="https://via.placeholder.com/600x400" alt="Revo">
                             <div class="project-overlay">
@@ -147,87 +147,16 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Revo</h3>
-                            <p class="project-subtitle">SaaS Framer Template</p>
+                            <h3 class="project-title">Campus Alumni Information System (CAIS)</h3>
+                            <p class="project-subtitle">Information System and Questionnaire Platform for Alumni</p>
                             <div class="project-tech">
                                 <span class="tech-tag">React</span>
                                 <span class="tech-tag">Next.js</span>
                                 <span class="tech-tag">Tailwind</span>
                             </div>
-                            <p class="project-description">A modern SaaS template with a clean design, built for
-                                startups and tech companies looking to showcase their products.</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="NajmAI">
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">NajmAI</h3>
-                            <p class="project-subtitle">Modern Framer Template</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Framer</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">AI</span>
-                            </div>
-                            <p class="project-description">An AI-powered template designed for creative agencies and
-                                digital studios with interactive elements and animations.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Stabraq">
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Stabraq</h3>
-                            <p class="project-subtitle">Portfolio Framer Template</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Framer</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Animation</span>
-                            </div>
-                            <p class="project-description">A portfolio template for designers and creatives with
-                                smooth animations and a focus on showcasing visual work.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="TaskAI">
-                            <div class="project-overlay">
-                                <a href="#" class="view-project">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">TaskAI</h3>
-                            <p class="project-subtitle">SaaS Framer Template</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">OpenAI</span>
-                            </div>
-                            <p class="project-description">A task management application with AI capabilities to
-                                help prioritize and organize work efficiently.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-card">
+                    <div class="slider-card project-card" onclick="openModal('A mobile application for tracking and reducing carbon footprint with personalized recommendations.')">
                         <div class="project-image">
                             <img src="https://via.placeholder.com/600x400" alt="EcoTrack">
                             <div class="project-overlay">
@@ -235,23 +164,103 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">EcoTrack</h3>
-                            <p class="project-subtitle">Environmental Monitoring App</p>
+                            <h3 class="project-title">Auctions Website</h3>
+                            <p class="project-subtitle">Local Auctions Website</p>
                             <div class="project-tech">
                                 <span class="tech-tag">React Native</span>
                                 <span class="tech-tag">Node.js</span>
                                 <span class="tech-tag">MongoDB</span>
                             </div>
-                            <p class="project-description">A mobile application for tracking and reducing carbon
-                                footprint with personalized recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="slider-card project-card" onclick="openModal('An AI-powered template designed for creative agencies and digital studios with interactive elements and animations.')">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="NajmAI">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Tracer Study IT Del</h3>
+                            <p class="project-subtitle">Questionnaire Platform for Alumni</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Framer</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-card project-card" onclick="openModal('A portfolio template for designers and creatives with smooth animations and a focus on showcasing visual work.')">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Stabraq">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Mini E-Commerce App</h3>
+                            <p class="project-subtitle">Microservice E-Commerce App</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Framer</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-card project-card" onclick="openModal('A task management application with AI capabilities to help prioritize and organize work efficiently.')">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="TaskAI">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Partisi Chat</h3>
+                            <p class="project-subtitle">Local Social Media App</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">OpenAI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-card project-card" onclick="openModal('A task management application with AI capabilities to help prioritize and organize work efficiently.')">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="TaskAI">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Numbrix Solver</h3>
+                            <p class="project-subtitle">Game Solver</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">OpenAI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-card project-card" onclick="openModal('A task management application with AI capabilities to help prioritize and organize work efficiently.')">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="TaskAI">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">BookShelf App</h3>
+                            <p class="project-subtitle">Game Solver</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">OpenAI</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="slider-nav next" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
             </div>
-
-            <!-- Tambahkan ini untuk bullets -->
-            <div class="slider-bullets" data-target="projects-slider"></div>
-        </div>
         </div>
     </section>
 
@@ -352,20 +361,6 @@
                         </span>
                         Figma
                     </div>
-                    <div class="tech-badge" data-aos="zoom-in" data-aos-delay="400"
-                        data-aos-anchor-placement="center-bottom">
-                        <span class="tech-icon">
-                            <i class="fas fa-bolt" style="color: #4E56A6;"></i>
-                        </span>
-                        Turborepo
-                    </div>
-                    <div class="tech-badge" data-aos="zoom-in" data-aos-delay="450"
-                        data-aos-anchor-placement="center-bottom">
-                        <span class="tech-icon">
-                            <i class="fas fa-dinosaur" style="color: #ffffff;"></i>
-                        </span>
-                        Deno
-                    </div>
                     <div class="tech-badge" data-aos="zoom-in" data-aos-delay="500"
                         data-aos-anchor-placement="center-bottom">
                         <span class="tech-icon">
@@ -397,13 +392,6 @@
                         </span>
                         Discord.js
                     </div>
-                    <div class="tech-badge" data-aos="zoom-in" data-aos-delay="300"
-                        data-aos-anchor-placement="center-bottom">
-                        <span class="tech-icon">
-                            <i class="fas fa-scroll" style="color: #FF3E00;"></i>
-                        </span>
-                        Rollup
-                    </div>
                     <div class="tech-badge" data-aos="zoom-in" data-aos-delay="350"
                         data-aos-anchor-placement="center-bottom">
                         <span class="tech-icon">
@@ -417,13 +405,6 @@
                             <i class="fas fa-triangle-exclamation" style="color: #ffffff;"></i>
                         </span>
                         Vercel
-                    </div>
-                    <div class="tech-badge" data-aos="zoom-in" data-aos-delay="450"
-                        data-aos-anchor-placement="center-bottom">
-                        <span class="tech-icon">
-                            <i class="fas fa-rocket" style="color: #ffffff;"></i>
-                        </span>
-                        Astro
                     </div>
                     <div class="tech-badge" data-aos="zoom-in" data-aos-delay="500"
                         data-aos-anchor-placement="center-bottom">
@@ -454,9 +435,9 @@
                             data-aos-anchor-placement="center-bottom">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <div class="timeline-date">2018 - 2022</div>
-                                <h4 class="timeline-title">Bachelor of Computer Science</h4>
-                                <p class="timeline-place">University of Technology</p>
+                                <div class="timeline-date">2022 - 2026 (Expected)</div>
+                                <h4 class="timeline-title">Bachelor of Informatics</h4>
+                                <p class="timeline-place">Institut Teknologi Del</p>
                                 <p class="timeline-description">Specialized in Artificial Intelligence and Machine
                                     Learning with a focus on natural language processing.</p>
                             </div>
@@ -466,9 +447,9 @@
                             data-aos-anchor-placement="center-bottom">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <div class="timeline-date">2022 - 2023</div>
-                                <h4 class="timeline-title">Master's in Data Science</h4>
-                                <p class="timeline-place">Tech Institute</p>
+                                <div class="timeline-date">2019 - 2021</div>
+                                <h4 class="timeline-title">Senior High-School </h4>
+                                <p class="timeline-place">SMA N 1 Lingga Utara</p>
                                 <p class="timeline-description">Advanced studies in data analysis, visualization, and
                                     machine learning algorithms.</p>
                             </div>
@@ -478,9 +459,9 @@
                             data-aos-anchor-placement="center-bottom">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <div class="timeline-date">2023</div>
-                                <h4 class="timeline-title">Full Stack Web Development</h4>
-                                <p class="timeline-place">Code Academy</p>
+                                <div class="timeline-date">2017-2019</div>
+                                <h4 class="timeline-title">Junior High-School</h4>
+                                <p class="timeline-place">SMP N 1 Lingga Utara</p>
                                 <p class="timeline-description">Intensive bootcamp covering modern web development
                                     technologies and practices.</p>
                             </div>
@@ -497,11 +478,12 @@
                             data-aos-anchor-placement="center-bottom">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <div class="timeline-date">2023 - Present</div>
-                                <h4 class="timeline-title">Senior Frontend Developer</h4>
-                                <p class="timeline-place">Tech Innovations Inc.</p>
-                                <p class="timeline-description">Leading the frontend development team for enterprise
-                                    SaaS applications using React and Next.js.</p>
+                                <div class="timeline-date">Jan 2025 - Present</div>
+                                <h4 class="timeline-title">System and AI Research Trainee</h4>
+                                <p class="timeline-place">University of Chicago</p>
+                                <p class="timeline-description">Selected to participate in a prestigious international research training program led by Prof. Haryadi Gunawi from 
+                                    the University of Chicago. Covers advanced topics in AI/ML, backend systems (Spark, Hadoop, HDFS, Cassandra), and open-source 
+                                    frameworks (TensorFlow, PyTorch).</p>
                             </div>
                         </div>
 
@@ -509,11 +491,12 @@
                             data-aos-anchor-placement="center-bottom">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <div class="timeline-date">2021 - 2023</div>
-                                <h4 class="timeline-title">Full Stack Developer</h4>
-                                <p class="timeline-place">Digital Solutions Ltd.</p>
-                                <p class="timeline-description">Developed and maintained web applications for clients in
-                                    various industries using MERN stack.</p>
+                                <div class="timeline-date">Aug 2024</div>
+                                <h4 class="timeline-title">Indonesia-China Youth Exchange Program 2024</h4>
+                                <p class="timeline-place">KADIN Indonesia Komite Tiongkok</p>
+                                <p class="timeline-description">Explored cutting-edge technology and industrial developments by touring facilities such as the Contemporary 
+                                    Amperex Technology Co. Limited (CATL) battery factory and the Yunhong Industrial Zone to observe the Two 
+                                    Countries Twin Park (TCTP) project, a collaborative effort between Indonesia and China.</p>
                             </div>
                         </div>
 
@@ -521,11 +504,22 @@
                             data-aos-anchor-placement="center-bottom">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <div class="timeline-date">2020 - 2021</div>
-                                <h4 class="timeline-title">Junior Web Developer</h4>
-                                <p class="timeline-place">StartUp Hub</p>
-                                <p class="timeline-description">Collaborated with designers and backend developers to
-                                    create responsive and interactive web interfaces.</p>
+                                <div class="timeline-date">Aug 2024 - Dec 2024</div>
+                                <h4 class="timeline-title">Computer Network Teaching Assistant</h4>
+                                <p class="timeline-place">Institut Teknologi Del</p>
+                                <p class="timeline-description">Assisting 50+ students with hands-on lab exercises, including configuring basic network devices like routers and 
+                                    switches, and utilizing modern network configuration tools and techniques.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400"
+                            data-aos-anchor-placement="center-bottom">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Aug 2024 - Dec 2024</div>
+                                <h4 class="timeline-title">Computer Architecture and Organization Teaching Assistant</h4>
+                                <p class="timeline-place">Institut Teknologi Del</p>
+                                <p class="timeline-description">Assisting 50+ students in learning CPU simulation tools, through practical modules and tutoring them with report 
+                                    preparation using provided formats.</p>
                             </div>
                         </div>
                     </div>
@@ -743,129 +737,102 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
+    <section id="achievements" class="achievements slider-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Notable <span class="highlight">Achievements</span></h2>
             </div>
 
-            <div id="achievements-slider" class="horizontal-slider">
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="achievement-card">
+            <div class="slider-container">
+                <button class="slider-nav prev" aria-label="Previous achievement"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-track" data-aos="fade-up">
+                    <div class="slider-card achievement-card" onclick="openModal('Selected as one of the national team finalists among over 25 teams in the Cloud Track of the Huawei ICT Competition 2024, demonstrating strong technical proficiency and teamwork in cloud computing solutions.')">
                         <div class="achievement-icon">
                             <i class="fas fa-trophy"></i>
                         </div>
-                        <h3 class="achievement-title">Hackathon Winner</h3>
-                        <p class="achievement-date">2022</p>
-                        <p class="achievement-description">First place in the National Coding Challenge for developing
-                            an innovative AI solution.</p>
+                        <h3 class="achievement-title">2nd Winner Huawei ICT Innovation Track 2024</h3>
+                        <p class="achievement-date">2024</p>
+                        <p class="achievement-description">Selected as one of the national team finalists among over 25 teams in the Cloud Track of the Huawei ICT Competition 2024, demonstrating strong technical proficiency and teamwork in cloud computing solutions.</p>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="achievement-card">
+                    <div class="slider-card achievement-card" onclick="openModal('Selected as one of the national team finalists among over 25 teams in the Cloud Track of the Huawei ICT Competition 2024, demonstrating strong technical proficiency and teamwork in cloud computing solutions.')">
                         <div class="achievement-icon">
                             <i class="fas fa-award"></i>
                         </div>
-                        <h3 class="achievement-title">Open Source Contributor</h3>
-                        <p class="achievement-date">2021 - Present</p>
-                        <p class="achievement-description">Active contributor to several major open source projects with
-                            over 500 contributions.</p>
+                        <h3 class="achievement-title">National Finalist Huawei ICT Cloud Track 2024</h3>
+                        <p class="achievement-date">2024</p>
+                        <p class="achievement-description">Selected as one of the national team finalists among over 25 teams in the Cloud Track of the Huawei ICT Competition 2024, demonstrating strong technical proficiency and teamwork in cloud computing solutions.</p>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="achievement-card">
+                    <div class="slider-card achievement-card" onclick="openModal('Published research paper on AI applications in healthcare in a prestigious journal.')">
                         <div class="achievement-icon">
                             <i class="fas fa-star"></i>
                         </div>
                         <h3 class="achievement-title">Research Publication</h3>
                         <p class="achievement-date">2023</p>
-                        <p class="achievement-description">Published research paper on AI applications in healthcare in
-                            a prestigious journal.</p>
+                        <p class="achievement-description">Published research paper on AI applications in healthcare in a prestigious journal.</p>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="achievement-card">
+                    <div class="slider-card achievement-card" onclick="openModal('2nd place in the Capture The Flag (CTF) competition organized by Institut Teknologi Del in collaboration with Politeknik Siber Sandi Negara and Sponsored by Huawei.')">
                         <div class="achievement-icon">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3 class="achievement-title">Patent Holder</h3>
-                        <p class="achievement-date">2022</p>
-                        <p class="achievement-description">Received patent for an innovative algorithm that improves
-                            machine learning efficiency.</p>
+                        <h3 class="achievement-title">2nd Winner Capture The Flag (CTF) Poltek SSN x IT-Del</h3>
+                        <p class="achievement-date">2024</p>
+                        <p class="achievement-description">2nd place in the Capture The Flag (CTF) competition organized by Institut Teknologi Del in collaboration with Politeknik Siber Sandi Negara and Sponsored by Huawei.</p>
                     </div>
                 </div>
+                <button class="slider-nav next" aria-label="Next achievement"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <!-- Tambahkan ini untuk bullets -->
-            <div class="slider-bullets" data-target="achievements-slider"></div>
         </div>
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates" class="certificates">
+    <section id="certificates" class="certificates slider-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Professional <span class="highlight">Certificates</span></h2>
             </div>
 
-            <div id="certificates-slider" class="horizontal-slider">
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="certificate-card">
+            <div class="slider-container">
+                <button class="slider-nav prev" aria-label="Previous certificate"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-track" data-aos="fade-up">
+                    <div class="slider-card certificate-card" onclick="openModal('AWS Certified Solutions Architect from Amazon Web Services.')">
                         <div class="certificate-logo">
                             <img src="https://via.placeholder.com/80x80" alt="AWS">
                         </div>
                         <h3 class="certificate-title">AWS Certified Solutions Architect</h3>
                         <p class="certificate-issuer">Amazon Web Services</p>
                         <p class="certificate-date">Issued Jan 2023 · Expires Jan 2026</p>
-                        <a href="#" class="certificate-link">View Certificate <i
-                                class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="certificate-card">
+                    <div class="slider-card certificate-card" onclick="openModal('Google Professional Cloud Developer from Google Cloud.')">
                         <div class="certificate-logo">
                             <img src="https://via.placeholder.com/80x80" alt="Google">
                         </div>
                         <h3 class="certificate-title">Google Professional Cloud Developer</h3>
                         <p class="certificate-issuer">Google Cloud</p>
                         <p class="certificate-date">Issued Mar 2023 · Expires Mar 2025</p>
-                        <a href="#" class="certificate-link">View Certificate <i
-                                class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="certificate-card">
+                    <div class="slider-card certificate-card" onclick="openModal('Microsoft Certified: Azure Developer Associate from Microsoft.')">
                         <div class="certificate-logo">
                             <img src="https://via.placeholder.com/80x80" alt="Microsoft">
                         </div>
                         <h3 class="certificate-title">Microsoft Certified: Azure Developer Associate</h3>
                         <p class="certificate-issuer">Microsoft</p>
                         <p class="certificate-date">Issued Jun 2022 · Expires Jun 2024</p>
-                        <a href="#" class="certificate-link">View Certificate <i
-                                class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </div>
-
-                <div class="slider-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="certificate-card">
+                    <div class="slider-card certificate-card" onclick="openModal('TensorFlow Developer Certificate from Google.')">
                         <div class="certificate-logo">
                             <img src="https://via.placeholder.com/80x80" alt="TensorFlow">
                         </div>
                         <h3 class="certificate-title">TensorFlow Developer Certificate</h3>
                         <p class="certificate-issuer">Google</p>
                         <p class="certificate-date">Issued Sep 2022 · No Expiration</p>
-                        <a href="#" class="certificate-link">View Certificate <i
-                                class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
+                <button class="slider-nav next" aria-label="Next certificate"><i class="fas fa-chevron-right"></i></button>
             </div>
-
-            <div class="slider-bullets" data-target="certificates-slider"></div>
         </div>
     </section>
 
@@ -878,7 +845,7 @@
                     <p class="contact-text">Unlock the potential of your product with expert design and development
                         services. Let's collaborate to create user-centered solutions that not only meet your goals but
                         also delight your users.</p>
-                    <a href="#" class="btn-icon">
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="btn-icon">
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -886,22 +853,30 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <p class="copyright">© 2023 Yizreel Sipahutar. All rights reserved.</p>
                 <div class="social-footer">
-                    <a href="#" class="social-footer-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/yizzzx" class="social-footer-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="social-footer-link" aria-label="GitHub">
+                    <a href="https://github.com/codenameyizzz" class="social-footer-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="#" class="social-footer-link" aria-label="Email">
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="social-footer-link" aria-label="Email">
                         <i class="far fa-envelope"></i>
                     </a>
-                    <a href="#" class="social-footer-link" aria-label="WhatsApp">
+                    <a href="https://wa.me/6281363333029" class="social-footer-link" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -919,23 +894,23 @@
         const toggleSwitch = document.getElementById('checkbox');
     
         document.addEventListener('DOMContentLoaded', () => {
-          const currentTheme = localStorage.getItem('theme');
-          if (currentTheme === 'light') {
-            document.body.classList.add('light-theme');
-            toggleSwitch.checked = true;
-          }
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'light') {
+                document.body.classList.add('light-theme');
+                toggleSwitch.checked = true;
+            }
         });
     
         toggleSwitch.addEventListener('change', function() {
-          if (this.checked) {
-            document.body.classList.add('light-theme');
-            localStorage.setItem('theme', 'light');
-          } else {
-            document.body.classList.remove('light-theme');
-            localStorage.setItem('theme', 'dark');
-          }
+            if (this.checked) {
+                document.body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.remove('light-theme');
+                localStorage.setItem('theme', 'dark');
+            }
         });
-      </script>
+    </script>
 </body>
 
 </html>

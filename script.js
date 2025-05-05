@@ -239,3 +239,19 @@ function updateNavbarTheme() {
         nav.style.padding = '16px 0';
     }
 }
+
+
+function openModal(content) {
+  document.getElementById("modal-text").innerText = content;
+  document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target === document.getElementById("modal")) {
+    closeModal();
+  }
+}
