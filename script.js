@@ -49,17 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Navbar scroll effect
     const nav = document.querySelector('nav');
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            nav.style.backgroundColor = document.documentElement.classList.contains('light-theme') ? 'rgba(249, 250, 251, 0.9)' : 'rgba(0, 0, 0, 0.9)';
-            nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-            nav.style.padding = '10px 0';
-        } else {
-            nav.style.backgroundColor = document.documentElement.classList.contains('light-theme') ? 'rgba(249, 250, 251, 0.8)' : 'rgba(0, 0, 0, 0.8)';
-            nav.style.boxShadow = 'none';
-            nav.style.padding = '16px 0';
-        }
-    });
+    window.addEventListener('scroll', updateNavbarTheme);
+
 
     // Horizontal slider controls
     const scrollButtons = document.querySelectorAll('.scroll-btn');
@@ -232,6 +223,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.documentElement.classList.remove('light-theme');
                 localStorage.setItem('theme', 'dark');
             }
+            updateNavbarTheme();
         });
     });
 });
+
+function updateNavbarTheme() {
+    if (window.scrollY > 50) {
+        nav.style.backgroundColor = document.documentElement.classList.contains('light-theme') ? 'rgba(249, 250, 251, 0.9)' : 'rgba(0, 0, 0, 0.9)';
+        nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+        nav.style.padding = '10px 0';
+    } else {
+        nav.style.backgroundColor = document.documentElement.classList.contains('light-theme') ? 'rgba(249, 250, 251, 0.8)' : 'rgba(0, 0, 0, 0.8)';
+        nav.style.boxShadow = 'none';
+        nav.style.padding = '16px 0';
+    }
+}

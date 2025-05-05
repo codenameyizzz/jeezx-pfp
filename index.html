@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -31,10 +32,12 @@
                     <a href="#achievements" class="nav-link">Achievements</a>
                     <a href="#certificates" class="nav-link">Certificates</a>
                     <a href="#contact" class="nav-link">Contact</a>
-                    <button class="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-moon"></i>
-                    </button>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                          <input type="checkbox" id="checkbox" />
+                          <div class="slider round"></div>
+                        </label>
+                    </div>
                     <a href="#contact" class="btn btn-primary">Let's Talk</a>
                 </div>
                 <div class="mobile-menu-btn">
@@ -68,10 +71,10 @@
                 <!-- Profile Card -->
                 <div class="profile-card" data-aos="fade-up" data-aos-duration="800">
                     <div class="profile-image">
-                        <img src="https://via.placeholder.com/400x400" alt="Yizreel Sipahutar">
+                        <img src="./image/PFP.png" alt="Yizreel Sipahutar">
                     </div>
                     <h2 class="profile-name">Yizreel Sipahutar</h2>
-                    <p class="profile-title">Fullstack-Developer | System and AI Research Enthusiast | Cloud Computing
+                    <p class="profile-title">Fullstack-Developer | Google Cloud Computing | System and AI Research Enthusiast | Machine Learning Engineer
                     </p>
                     <p class="profile-location">Toba Samosir, Indonesia</p>
 
@@ -115,18 +118,7 @@
                         <a href="#" class="btn btn-outline download-cv" data-aos="fade-up" data-aos-delay="450">
                             <i class="fas fa-download"></i> Download CV
                         </a>
-                        <a href="#projects" class="btn btn-outline" data-aos="fade-up" data-aos-delay="500">My Work <i
-                                class="fas fa-arrow-right"></i></a>
-                    </div>
-
-                    <!-- Clients -->
-                    <div class="clients" data-aos="fade-up" data-aos-delay="600">
-                        <p class="clients-text">Relied on by companies near, far, and worldwide</p>
-                        <div class="client-logos">
-                            <img src="https://via.placeholder.com/120x40" alt="Client Logo" class="client-logo">
-                            <img src="https://via.placeholder.com/120x40" alt="Client Logo" class="client-logo">
-                            <img src="https://via.placeholder.com/120x40" alt="Client Logo" class="client-logo">
-                        </div>
+                        <a href="#projects" class="btn btn-outline" data-aos="fade-up" data-aos-delay="500">See more</a>
                     </div>
                 </div>
             </div>
@@ -923,6 +915,27 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        const toggleSwitch = document.getElementById('checkbox');
+    
+        document.addEventListener('DOMContentLoaded', () => {
+          const currentTheme = localStorage.getItem('theme');
+          if (currentTheme === 'light') {
+            document.body.classList.add('light-theme');
+            toggleSwitch.checked = true;
+          }
+        });
+    
+        toggleSwitch.addEventListener('change', function() {
+          if (this.checked) {
+            document.body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.body.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+          }
+        });
+      </script>
 </body>
 
 </html>

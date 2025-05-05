@@ -1838,3 +1838,112 @@ footer {
   background-color: var(--primary-color);
   transform: scale(1.3);
 }
+
+/* Smooth transition for theme switching */
+body, 
+.project-card, 
+.timeline-content, 
+.tech-badge, 
+.testimonial-card, 
+nav, 
+.hero, 
+.contact-card {
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Theme toggle icon default hidden */
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+.theme-toggle .fa-moon {
+    display: block;
+}
+
+/* When Light Mode active, show sun */
+.light-theme .theme-toggle .fa-sun {
+    display: block;
+}
+
+.light-theme .theme-toggle .fa-moon {
+    display: none;
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.light-theme header,
+.light-theme main,
+.light-theme .card {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+}
+
+/* Theme Switcher */
+.theme-switch-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  width: 60px;
+  position: relative;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Navbar Style */
+nav {
+  background-color: #1a1a1a; /* dark default */
+  color: white;
+  padding: 1rem;
+}
+
+/* Navbar Style for Light Theme */
+body.light-theme nav {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
